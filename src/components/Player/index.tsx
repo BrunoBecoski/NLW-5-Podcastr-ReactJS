@@ -12,6 +12,7 @@ import styles from './styles.module.scss';
 export function Player() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [progress, setProgress] = useState(0);
+  const [volume, setVolume] = useState(50);
 
   const { 
     episodeList, 
@@ -41,6 +42,9 @@ export function Player() {
       audioRef.current.pause();
     }
 
+    audioRef.current.volume = 0.50;
+
+
   },[isPlaying]);
 
   function setupProgressListener() {
@@ -56,12 +60,28 @@ export function Player() {
     setProgress(amount);
   }
 
+  function handleVolumeSeek(amount: number) {
+    const value = amount > 9 ? '0.' + amount : '0.0' + amount;
+    audioRef.current.volume = Number(value);
+    setVolume(amount);
+  }
+
   function handleEpisodeEnded() {
     if (hasNext) {
       playNext();
     } else {
       clearPlayerState();
     }
+  }
+
+  function volumeMax() {
+    audioRef.current.volume = 0.99;
+    setVolume(99)
+  }
+
+  function volumeMute() {
+    audioRef.current.volume = 0.00;
+    setVolume(0)
   }
 
   const episode = episodeList[currentEpisodeIndex];
@@ -121,6 +141,7 @@ export function Player() {
             onPlay={() => setPlayingState(true)}
             onPause={() => setPlayingState(false)}
             onLoadedMetadata={setupProgressListener}
+            
           />
         )}
 
@@ -159,6 +180,37 @@ export function Player() {
             <img src="/repeat.svg" alt="Repetir" />
           </button>
         </div>
+
+        <div className={styles.volume}>
+          <button 
+            onClick={volumeMute} 
+            disabled={!episode}
+          >
+            <img src="/mute.svg" alt="Volume máximo" />
+          </button>
+          <div className={styles.volumeSlider}>
+            { episode ? (
+              <Slider
+                max={99}
+                value={volume}
+                onChange={handleVolumeSeek}
+                trackStyle={{ backgroundColor: '#04d361' }}
+                railStyle={{ backgroundColor: '#9f75ff' }}
+                handleStyle={{ borderColor: '#04d361', borderWidth: 4 }}
+              />
+            ) : (
+              <div className={styles.emptyVolumeSlider}/>
+            )}
+          </div>
+          <button 
+            onClick={volumeMax} 
+            disabled={!episode}
+          >
+            <img src="/volume.svg" alt="Volume máximo" />
+          </button>
+        </div>
+
+
       </footer>
     </div>
   );
