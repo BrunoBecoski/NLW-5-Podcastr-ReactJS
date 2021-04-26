@@ -41,3 +41,24 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 </br>
 
 ## 🚀 Como executar
+
+- Clone o repositório
+```
+git clone https://github.com/BrunoBecoski/NLW-5-Podcastr-ReactJS.git
+```
+- Instale as depêndencias
+```
+yarn install
+```
+- Inicie o servidor JSON
+``` 
+yarn server 
+```
+- Inicie o servidor Next.js
+``` 
+yarn dev
+```
+- Acesse no seu navegador
+```
+http://localhost:3000
+```
