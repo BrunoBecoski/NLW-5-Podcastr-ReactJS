@@ -19,6 +19,7 @@
 </br>
 
 ## 📖 Sobre
+App de podcast desenvolvido durante a NLW#5 Trilha ReactJs da Rocketseat de 19 a 25 de Abril 2021. 
 
 
 </br>
@@ -36,7 +37,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 </br>
 
 ## 💻 Projeto
-
+O Podcastr é uma app para ouvir podcasts no navegador. 
 
 </br>
 
