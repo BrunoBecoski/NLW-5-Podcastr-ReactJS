@@ -47,8 +47,8 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
             return (
               <li key={episode.id}>
                 <Image 
-                  width={192} 
-                  height={192} 
+                  width={200} 
+                  height={200} 
                   src={episode.thumbnail} 
                   alt={episode.title} 
                   objectFit="cover"
@@ -60,7 +60,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                   </Link>
                   <p>{episode.members}</p>
                   <span>{episode.publishedAt}</span>
-                  <span>{episode.durationAsString}</span>
+                  <span>{episode.durationAsString}</span> 
                 </div>
 
                 <button type="button" onClick={() => playList(episodeList, index)}>
