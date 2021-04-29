@@ -172,3 +172,68 @@
     }
   }
 }
+
+.latestEpisodesDark {
+  h2 {
+    color: var(--gray-50);
+  }
+
+  ul {
+    li {
+      background: var(--gray-990);
+      border-color: var(--gray-500);
+      .episodeDetails {
+        a {
+          color: var(--gray-50);
+        }
+        p {
+          color: var(--gray-200)
+        }
+        span {
+          color: var(--gray-200);
+        }
+      }
+      button {
+        background: var(--gray-990);
+        border-color: var(--gray-500);
+
+        &:hover {
+          filter: brightness(2.0);
+        }
+      } 
+    }
+  }
+}
+
+.allEpisodesDark {
+  h2 {
+    color: var(--gray-50);
+  }
+  
+  table {
+    th, td {
+      border-color: var(--gray-200);
+    }
+
+    th {
+      color: var(--gray-500);
+    }
+
+    td {
+      color: var(--gray-200);
+
+      a {
+        color: var(--gray-50);
+      }
+
+      button {
+        background: var(--gray-980);
+        border-color: var(--gray-500);
+
+        &:hover {
+          filter: brightness(2.0);
+        }
+      }
+    }
+  }
+}

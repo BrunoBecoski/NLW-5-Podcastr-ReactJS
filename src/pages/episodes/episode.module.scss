@@ -89,3 +89,21 @@
     }
   }
 }
+
+.episodeDark {
+  header {
+    border-color: var(--gray-500);
+
+    h1 {
+      color: var(--gray-50);
+    }
+
+    span {
+      color: var(--gray-200); 
+    }    
+  }
+
+  .description {
+    color: var(--gray-50);
+  }
+}

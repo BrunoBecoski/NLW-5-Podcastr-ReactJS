@@ -26,14 +26,17 @@ type Episode = {
 
 type EpisodeProps = {
   episode: Episode;
+  isDarkMode: boolean;
 }
 
-export default function Episode({ episode }: EpisodeProps) {
+export default function Episode({ episode, isDarkMode }: EpisodeProps) {
   const { play } = usePlayer();
+  const color = isDarkMode && '#181621';
 
   return (
-    <div className={styles.scrolling}>
-      <div className={styles.episode}>
+    <div className={styles.scrolling}  style={{ backgroundColor: color}}>
+      <div className={`${styles.episode} ${isDarkMode ? styles.episodeDark : ''}`}>
+
         <Head>
           <title>{episode.title} | Podcastr</title>
         </Head>

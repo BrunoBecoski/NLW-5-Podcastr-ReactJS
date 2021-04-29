@@ -18,5 +18,50 @@
   span {
     margin-left: auto;
     text-transform: capitalize;
+
+    margin-right: 2rem;
+    padding: 0.25rem 2rem 0.25rem 0;
+    border-right: 1px solid var(--gray-100);
+  }
+  
+  button {
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    transition: transform 0.2s;
+    
+    &:hover {
+      filter: brightness(0.5);
+    }
+  }
+}
+
+.headerContainerDark {
+  background: #13111a;
+  color: var(--gray-50);
+  border-color: var(--gray-200);
+
+  p {
+    border-color: var(--gray-900);
+  }
+
+  span {
+    border-color: var(--gray-900);
+  }
+  
+  button {    
+    &:hover {
+      filter: brightness(5.0);
+    }
   }
 }
