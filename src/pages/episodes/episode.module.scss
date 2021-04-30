@@ -90,6 +90,7 @@
   }
 }
 
+
 .episodeDark {
   header {
     border-color: var(--gray-500);
@@ -105,5 +106,43 @@
 
   .description {
     color: var(--gray-50);
+  }
+}
+
+@media (max-width: 768px) {
+  .episode {
+    max-width: 50rem;
+    padding: 2rem;
+    margin-bottom: 10rem;
+  }
+  
+}
+
+
+@media (max-width: 500px) {
+  .episode {
+    margin-bottom: 6rem;
+
+    header {
+      padding-bottom: 1rem;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      span {
+        display: inline-block;
+        font-size: 1rem;
+        
+        & + span {
+          margin-top: 1rem;
+          margin-left: 0;
+
+          &::before {
+            left: .5rem;
+          }
+        }
+      }    
+    }
   }
 }

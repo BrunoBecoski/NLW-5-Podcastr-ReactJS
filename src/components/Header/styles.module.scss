@@ -65,3 +65,19 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .headerContainer {
+    justify-content: space-between;
+    height: 5rem;
+    
+    p {
+      display: none;
+    }
+  
+    span {
+      display: none;
+    }
+    
+  }
+}

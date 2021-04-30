@@ -92,6 +92,50 @@
   }
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+  
+  button {
+    background: transparent;
+    border: 0;
+    font-size: 0;
+    
+    transition: filter 0.2s;
+    
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+    
+    &:hover:not(:disabled) {
+      filter: brightness(0.7);
+    }
+
+    &.isActive {
+      filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+    }    
+    
+    &.isActive:hover {
+      filter: brightness(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+    }
+ 
+    &.playButton {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1rem;
+      background: var(--purple-400);
+
+      &:hover:not(:disabled) {
+        filter: brightness(0.95);
+      }
+    }      
+  }
+}
+
 .volume {
   display: flex;
   align-items: center;
@@ -128,47 +172,106 @@
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2.5rem;
-  gap: 1.5rem;
 
-  button {
-    background: transparent;
-    border: 0;
-    font-size: 0;
+
+@media (max-width: 768px) {
+  .playerContainer {
+    position: fixed;
+    bottom: 0;
+    padding: 1rem 2rem;
+    width: 100vw;
+    height: 10rem;
+    flex-direction: row;
     
-    transition: filter 0.2s;
-
-    &:disabled {
-      cursor: default;
-      opacity: 0.5;
+    header {
+      display: none;
     }
-
-    &:hover:not(:disabled) {
-      filter: brightness(0.7);
-    }
-
-    &.isActive {
-      filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
-    }    
-    
-    &.isActive:hover {
-      filter: brightness(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
-    }
- 
-    &.playButton {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 1rem;
-      background: var(--purple-400);
-
-      &:hover:not(:disabled) {
-        filter: brightness(0.95);
-      }
-    }      
   }
+  
+  .currentEpisode {
+    display: flex;
+    align-items: center;
+    
+    img {
+      border-radius: 0.5rem;
+      width: 8rem;
+      height: 8rem;
+    }
+    
+    strong {
+      margin-left: 1rem;
+      width: 45vw;
+      margin-bottom: 1rem;
+    }
+    
+    span {
+      display: none;
+    }
+  }
+  
+  .emptyPlayer {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .progress {
+    position: fixed;
+    width: 84vw;
+    right: 0;
+    padding: 0.25rem 1rem;    
+
+    span {
+      width: 6rem;
+    }
+  }
+
+  .volume {
+    display: none;
+  } 
 }
 
+
+@media (max-width: 500px) {
+  .playerContainer {
+    padding: 0;
+    height: 8rem;
+
+    strong {
+      font-size: 1rem;
+    }
+  }
+
+  .currentEpisode {    
+    img {
+      width: 0;
+      height: 0;
+    }
+    
+    strong {
+      margin-left: 0;
+      width: 75vw;
+    }
+  }
+
+  .emptyPlayer {
+    width: 100%;
+    border: none;
+    background: transparent;
+  }
+
+  .progress {
+    margin-top: .25rem;
+    width: 100vw;
+  }
+
+  .buttons {
+    margin-right: 2rem;
+
+    button:nth-child(1),
+    button:nth-child(2),
+    button:nth-child(4),
+    button:nth-child(5) {
+      display: none;
+    }
+  }
+}

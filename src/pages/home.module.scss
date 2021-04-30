@@ -173,6 +173,7 @@
   }
 }
 
+
 .latestEpisodesDark {
   h2 {
     color: var(--gray-50);
@@ -232,6 +233,91 @@
 
         &:hover {
           filter: brightness(2.0);
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .homepage {
+    padding: 0 2rem;
+  }
+
+  .latestEpisodes {
+    ul {      
+      gap: 1rem;
+      
+      li {
+        button {
+          right: 1.5rem;
+          bottom: 1rem;
+        } 
+      }
+    }
+  }
+
+  .allEpisodes {
+    padding-bottom: 10rem; 
+  }
+}
+
+
+@media (max-width: 500px) {
+  .homepage {
+    padding: 0 1.5rem;
+
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  .latestEpisodes {
+
+    ul {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      
+      li {
+        .episodeDetails { 
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  
+  .allEpisodes {
+    padding-bottom: 10rem;
+  
+    table {    
+
+      th {
+        font-size: 1rem;
+      }
+
+      th:first-child,
+      td:first-child {
+        display: none;
+      }
+
+      th:nth-child(3),
+      th:nth-child(4),
+      td:nth-child(3),
+      td:nth-child(4) {
+        display: none;
+      }
+
+      td {
+        font-size: 1rem;
+  
+        img {
+          width: 0;
+          height: 0;
         }
       }
     }
