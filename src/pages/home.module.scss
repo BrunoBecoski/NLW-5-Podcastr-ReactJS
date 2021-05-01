@@ -241,16 +241,18 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .homepage {
     padding: 0 2rem;
   }
 
   .latestEpisodes {
     ul {      
+      grid-template-columns: 1fr;
       gap: 1rem;
       
       li {
+        max-width: 40rem;
         button {
           right: 1.5rem;
           bottom: 1rem;
@@ -261,6 +263,13 @@
 
   .allEpisodes {
     padding-bottom: 10rem; 
+
+    table {
+      th:nth-child(3),
+      td:nth-child(3) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -277,10 +286,7 @@
   
   .latestEpisodes {
 
-    ul {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      
+    ul {      
       li {
         .episodeDetails { 
           p {
@@ -305,9 +311,7 @@
         display: none;
       }
 
-      th:nth-child(3),
       th:nth-child(4),
-      td:nth-child(3),
       td:nth-child(4) {
         display: none;
       }

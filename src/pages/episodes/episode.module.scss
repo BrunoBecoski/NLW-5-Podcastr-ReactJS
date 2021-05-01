@@ -115,21 +115,20 @@
     padding: 2rem;
     margin-bottom: 10rem;
   }
-  
 }
 
 
 @media (max-width: 500px) {
   .episode {
     margin-bottom: 6rem;
-
+    
     header {
       padding-bottom: 1rem;
-
+      
       h1 {
         font-size: 1.5rem;
       }
-
+      
       span {
         display: inline-block;
         font-size: 1rem;
@@ -142,7 +141,18 @@
             left: .5rem;
           }
         }
-      }    
+
+        &:nth-child(2) {
+          display: block;          
+        }
+
+        &:nth-child(3) {
+          padding: 0;
+          &::before {
+            display: none;
+          }
+        }
+      }  
     }
   }
 }
