@@ -10,16 +10,18 @@
   <a href="#-como-executar">Como executar</a>
 </p> 
 
+</br>
+
 <p align="center">
   <img alt="" src="" />
-  <img alt="" src=".github/" height="400" />
+  <img alt="" src=".github/capa.png" height="450" />
 </p>
 
 
 </br>
 
 ## 📖 Sobre
-App de podcast desenvolvido durante a NLW#5 Trilha ReactJs da Rocketseat de 19 a 25 de Abril 2021. 
+O Podcastr é um app para podcast desenvolvido durante a NLW#5 da Rocketseat Trilha ReactJs entre os dias 19 e 25 de Abril 2021. 
 
 
 </br>
