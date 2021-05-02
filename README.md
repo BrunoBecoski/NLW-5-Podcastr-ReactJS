@@ -5,6 +5,7 @@
 
 <p align="center">
   <a href="#-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-executar">Como executar</a>
@@ -13,8 +14,7 @@
 </br>
 
 <p align="center">
-  <img alt="" src="" />
-  <img alt="" src=".github/capa.png" height="450" />
+  <img alt="Capa" src=".github/capa.png" height="450" />
 </p>
 
 
@@ -23,7 +23,26 @@
 ## 📖 Sobre
 O Podcastr é um app para podcast desenvolvido durante a NLW#5 da Rocketseat Trilha ReactJs entre os dias 19 e 25 de Abril 2021. 
 
+</br>
 
+## Layout
+
+<p align="center" >
+   <img alt="Home" src=".github/home.png" height="200" />
+   <img alt="Episódio" src=".github/episodio.png" height="200" />
+   
+   <img alt="Home Dark" src=".github/home-dark.png" height="200" />
+   <img alt="Episódio Dark" src=".github/episodio-dark.png" height="200" />
+</p>
+
+<p align="center" >
+   <img alt="Mobile Home" src=".github/mobile_home.png" width="200" />
+   <img alt="Mobile Episódio" src=".github/mobile_episodio.png" width="200" />
+   
+   <img alt="Mobile Home Dark" src=".github/mobile_home-dark.png" width="200" />
+   <img alt="Mobile Episódio Dark" src=".github/mobile_episodio-dark.png" width="200" />
+</p>
+   
 </br>
 
 ## ⚙ Tecnologias
