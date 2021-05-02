@@ -28,11 +28,11 @@ O Podcastr é um app para podcast desenvolvido durante a NLW#5 da Rocketseat Tri
 ## Layout
 
 <p align="center" >
-   <img alt="Home" src=".github/home.png" height="200" />
-   <img alt="Episódio" src=".github/episodio.png" height="200" />
+   <img alt="Home" src=".github/home.png" height="175" />
+   <img alt="Episódio" src=".github/episodio.png" height="175" />
    
-   <img alt="Home Dark" src=".github/home-dark.png" height="200" />
-   <img alt="Episódio Dark" src=".github/episodio-dark.png" height="200" />
+   <img alt="Home Dark" src=".github/home-dark.png" height="175" />
+   <img alt="Episódio Dark" src=".github/episodio-dark.png" height="175" />
 </p>
 
 <p align="center" >
