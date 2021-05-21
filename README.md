@@ -68,7 +68,7 @@ O Podcastr é uma app para ouvir podcasts no navegador.
 ```
 git clone https://github.com/BrunoBecoski/NLW-5-Podcastr-ReactJS.git
 ```
-- Instale as depêndencias
+- Instale as dependências
 ```
 yarn install
 ```
